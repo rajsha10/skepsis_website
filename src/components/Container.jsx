@@ -46,7 +46,7 @@ const Container = (props) => {
 const AllCont = styled.div`
     /* background-color: yellow; */
     width: 100%;
-    margin-top: 90px;
+    margin-top: 20px;
 `;
 
 const BringCont = styled.div`
@@ -112,7 +112,7 @@ const ButtonCont = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 10px;
 `;
 
 const Join = styled.button`
