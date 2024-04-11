@@ -44,7 +44,7 @@ const Container = (props) => {
 };
 
 const AllCont = styled.div`
-    /* background-color: yellow; */
+    ${'' /* background-color: yellow; */}
     width: 100%;
     margin-top: 20px;
 `;
@@ -105,6 +105,8 @@ const TextCont = styled.div`
         right: 80px;
         width: 90px;
     }
+
+    
 `;
 
 const ButtonCont = styled.div`

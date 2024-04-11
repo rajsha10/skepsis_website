@@ -25,11 +25,12 @@ const Header = (props) => {
             <li>contact</li>
           </ul>
         </Menu>
-        <Sign>lorem, ipsum</Sign>
+        <Sign >lorem, ipsum</Sign>
       </Nav>
     </>
   );
 };
+
 
 const Nav = styled.div`
   display: flex;
@@ -47,6 +48,7 @@ const Logo = styled.div`
   }
 
   margin-left: 2.2rem;
+
 `;
 
 const Menu = styled.div`
@@ -92,12 +94,14 @@ const Sign = styled.button`
     font-size: 17px;
     font-family: 'Fontspring DEMO Biennale Bold', sans-serif;
     background: transparent;
+    ${'' /* background: #000000; */}
     border: 2px #BCBCBC solid;
     padding: 12px 45px;
     border-radius: 34px;
     margin-right: 2.2rem;
     cursor: pointer;
     transition : all 0.15s ease;
+
 
     &:hover{
         scale: 0.99;

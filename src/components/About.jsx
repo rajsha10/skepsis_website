@@ -1,43 +1,62 @@
-import styled, { createGlobalStyle } from "styled-components";
-import FontspringDEMObiennaleBold from "/fonts/Fontspring-DEMO-biennale-bold.otf";
-import ToggleSwitch from "../miniComponents/ToggleSwitch";
-import AboutDiv from "../miniComponents/AboutDiv";
+// About.jsx
 
-const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'FontSpring Biennale Bold';
-    src: url(${FontspringDEMObiennaleBold}) format('opentype');
-  }
-`;
+import React from 'react';
+import styled, { createGlobalStyle } from "styled-components";
 
 const About = (props) => {
     
     
     return(
         <>
-            <GlobalStyle />
-            <MainCont>
-                <HeadingAbout>about</HeadingAbout>
-                <ToggleSwitch />
-                <InfoArea>
-                    <AboutDiv title='Angelina Jolie'
-                     info='Angelina Jolie is an American actress, filmmaker and humanitarian.' />
-                    <div className="twoCards">
-                        <AboutDiv title='Brad Pitt'
-                        info='William Bradley Pitt is an American actor and film producer.' />
-                        <AboutDiv title='Akshay Kumar'
-                        info='Akshay Hari Om Bhatia, known professionally as Akshay Kumar, 
-                        is an Indian actor and film producer working in Hindi cinema' />
-                    </div>
-                    <AboutDiv title='Shah Rukh Khan'
-                     info='Shah Rukh Khan, also known by the initialism SRK,
-                      is an Indian actor and film producer who works in Hindi films.' />
-                </InfoArea>
-            </MainCont>
+            
         </>
     );
 
 };
+const AllCont = styled.div`
+    ${'' /* background-color: yellow; */}
+    width: 100%;
+    margin-top: 90px;
+
+`;
+const Aboutcont = styled.div`
+display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    margin-top: 90px;
+    height: 100%; 
+`;
+const Bringcont1 = styled.div`
+display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    margin-top: 15px;
+    height: 100%; 
+    p{
+        width:70%;
+        font-family: 'Clash Display Regular';
+        font-size: 20px;
+        font-weight: 1000;
+        ${'' /* text-shadow: 0 20px 10px rgba(0,0,0,0.23); */}
+    }
+`;
+const Bringcont2 = styled.div`
+display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    height: 100%; 
+    p{
+        width: 55%;
+        font-family: 'Clash Display Regular';
+        font-size: 18px;
+        text-shadow: 0 20px 10px rgba(0,0,0,0.23);
+    }
+`;
 
 const MainCont = styled.div`
     /* background-color: yellow; */
@@ -72,3 +91,4 @@ const InfoArea = styled.div`
 `;
 
 export default About;
+
