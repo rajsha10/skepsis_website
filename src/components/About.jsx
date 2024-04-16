@@ -1,92 +1,112 @@
-// About.jsx
-
 import React from 'react';
 import styled, { createGlobalStyle } from "styled-components";
+import ToggleSwitch from '../miniComponents/ToggleSwitch';
+import FontspringDEMObiennaleBold from "/fonts/Fontspring-DEMO-biennale-bold.otf";
+import AboutDiv from "../miniComponents/AboutDiv";
+
+const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'FontSpring Biennale Bold';
+    src: url(${FontspringDEMObiennaleBold}) format('opentype');
+  }
+`;
 
 const About = (props) => {
-    
-    
     return(
         <>
-            
+            <GlobalStyle />
+            <AllCont>
+                <HeadCont>
+                    <img src="/images/leftArrow.svg" alt="" id="leftArrow" />
+                    <div id='aboutHeadCont'>
+                        <h3 id='aboutHead'>about us</h3>
+                        <ToggleSwitch />
+                    </div> 
+                    <img src="/images/arrowRight.svg" alt="" id="rightArrow" />
+                </HeadCont>
+                <InfoCont>
+                    <p id="str1">-----</p>
+                    <AboutDiv title="Lorem, ipsum." info="Lorem ipsum dolor sit amet." />
+                    <div className="twoInfo">
+                        <AboutDiv title="Lorem, ipsum." info="Lorem ipsum dolor sit amet." />
+                        <AboutDiv title="Lorem, ipsum." info="Lorem ipsum dolor sit amet." />
+                    </div>
+                    <AboutDiv title="Lorem, ipsum." info="Lorem ipsum dolor sit amet." />
+                    <p id="str2">-----</p>
+                </InfoCont>  
+            </AllCont>
         </>
     );
 
 };
+
 const AllCont = styled.div`
-    ${'' /* background-color: yellow; */}
+    height: 100vh;
     width: 100%;
-    margin-top: 90px;
-
-`;
-const Aboutcont = styled.div`
-display: flex;
-    justify-content: center; 
-    align-items: center; 
-    width: 100%;
-    margin-top: 90px;
-    height: 100%; 
-`;
-const Bringcont1 = styled.div`
-display: flex;
-    justify-content: center; 
-    align-items: center;
-    text-align: center; 
-    margin-top: 15px;
-    height: 100%; 
-    p{
-        width:70%;
-        font-family: 'Clash Display Regular';
-        font-size: 20px;
-        font-weight: 1000;
-        ${'' /* text-shadow: 0 20px 10px rgba(0,0,0,0.23); */}
-    }
-`;
-const Bringcont2 = styled.div`
-display: flex;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    width: 100%;
-    margin-top: 30px;
-    height: 100%; 
-    p{
-        width: 55%;
-        font-family: 'Clash Display Regular';
-        font-size: 18px;
-        text-shadow: 0 20px 10px rgba(0,0,0,0.23);
-    }
-`;
-
-const MainCont = styled.div`
-    /* background-color: yellow; */
-    width: 100%;
-    height: 50rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
 `;
 
-const HeadingAbout = styled.p`
-    width: 100%;
-    text-align: center;
-    font-family: 'FontSpring Biennale Bold';
-    font-size: 5.2rem;
-    text-shadow: 0 5px 10px rgba(0,0,0,0.3);
-`;
-
-const InfoArea = styled.div`
-    width: 100%;
+const HeadCont = styled.div`
+    width: 50%;
+    position: relative;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
 
-    .twoCards{
+    #aboutHeadCont{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+    }
+
+    #aboutHead{
+        font-family: 'FontSpring Biennale Bold';
+        font-size: 4.5rem;
+        text-align: center;
+        color: #000000;
+        margin-bottom: .5rem;
+    }
+
+    #leftArrow, #rightArrow{
+        position: absolute;
+        width: 40%;
+    }
+
+    #leftArrow{
+        top: 5rem;
+        left: -6rem;
+    }
+    
+    #rightArrow{
+        bottom: 2.5rem;
+        right: -6rem;
+    }
+`;
+
+const InfoCont = styled.div`
+    position: relative;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    #str1{
+        font-size: 3rem;
+        position: absolute;
+        top: 32%;
+        left: 30%;
+        z-index: -1;
+    }
+    #str2{
+        font-size: 3rem;
+        position: absolute;
+        z-index: -1;
+        top: 40%;
+        right: 30%;
     }
 `;
 

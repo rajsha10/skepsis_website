@@ -28,8 +28,8 @@ const AboutDiv = ({title, info}) => {
 
 const InfoArea = styled.div`
     position: relative;
-    height: 15rem;
-    width: 12rem;
+    height: 17rem;
+    width: 13rem;
     background-color: #DBDBDB;
     border: none;
     border-radius: 30px;

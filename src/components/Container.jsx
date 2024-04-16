@@ -57,7 +57,7 @@ const BringCont = styled.div`
 
     #blueBubble{
         position: relative;
-        bottom: -90px;
+        bottom: -190px;
         width: 12rem; 
     }
     
@@ -67,7 +67,7 @@ const BringCont = styled.div`
     
     #pinkBubble{
         position: relative;
-        top: -90px;
+        top: 0;
         width: 10.5rem;
     }
 `;

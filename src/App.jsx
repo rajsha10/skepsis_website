@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Container from './components/Container';
 import About from './components/About';
-import About from './components/About';
 import ClubS from './components/ClubS';
 import Team from './components/Team';
 
@@ -20,7 +19,6 @@ function App() {
         <Routes>
           <Route exact path='/' element={<>
             <Container />
-            <About />
             <About />
             <ClubS />
             <Team />
