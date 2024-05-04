@@ -76,6 +76,10 @@ const HeadCont = styled.div`
         width: 40%;
     }
 
+    #leftArrow, #rightArrow{
+        opacity : 0.5;
+    }
+
     #leftArrow{
         top: 5rem;
         left: -6rem;
@@ -93,6 +97,10 @@ const InfoCont = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    #str1, #str2{
+        opacity : 0.5;
+    }
 
     #str1{
         font-size: 3rem;
